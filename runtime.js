@@ -33,7 +33,7 @@ function getSizedArray(size){
     return array
 }
 
-
+const ultraTinyArray = getSizedArray(1);
 const tinyArray = getSizedArray(10);
 const smallArray = getSizedArray(100);
 const mediumArray = getSizedArray(1000);
@@ -47,16 +47,16 @@ const extraLargeArray = getSizedArray(100000);
 
 // Try it with first function
 perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
+doublerAppend(ultraTinyArray);
 let resultsAppend = perf.stop();  // Stops timer and save time results
 
 
 // Try it with second function
 perf.start();
-doublerInsert(extraLargeArray);
+doublerInsert(ultraTinyArray);
 let resultsInsert = perf.stop();
 
 
-console.log('Results for the extraLargeArray');
+console.log('Results for the ultraTinyArray');
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
